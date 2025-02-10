@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            margin: 0;
+        }
+        #loader{
+            position: relative;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #b0ffe6;
+            transition: .5s;
+            animation: loader 2s ease-in alternate infinite ;
+        }
+        @keyframes loader {
+            from {
+                border-radius: 50%;
+                background-color: #b0ffe6;
+            }
+            12.5% {
+                border-radius: 0 50% 50% 50%;
+                transform: rotate(45deg);
+                background-color: #98ffde;
+            }
+            25%{
+                border-radius: 0 0 50% 50%;
+                transform: rotate(90deg);
+                background-color: aquamarine;
+            }
+            37.5%{
+                border-radius: 0 0 0 50%;
+                transform: rotate(135deg);
+                background-color: #6cffce;
+
+            }
+            50% {
+                border-radius: 0;
+                transform: rotate(180deg);
+                background-color: #59ffc7;
+            }
+            62.5% {
+                border-radius: 50% 0 0 0;
+                transform: rotate(225deg);
+                background-color: #3cffbe;
+            }
+            75% {
+                border-radius: 50% 50% 0 0;
+                transform: rotate(270deg);
+                background-color: #24ffb5;
+            }
+            87.5%{
+                border-radius: 50% 50% 50% 0;
+                transform: rotate(315deg);
+                background-color: #14ffb0;
+            }
+            to {
+                border-radius: 50%;
+                transform: rotate(360deg);
+                background-color: #00ffa8;
+            }
+        }
+    </style>
+    <script>
+        setTimeout(() => {
+            document.getElementById('loader').style.display = 'none';
+        }, 5000)
+
+    </script>
+</head>
+<body style="background-color: white">
+<span id="loader"></span>
+<div id="content">
+
+</div>
+</body>
+</html>
